@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns="http://www.mulesoft.org/schema/mule/core"
+	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd">
+	<flow name="mule-web-template-interface-flow" doc:id="0c689383-7db0-47c4-a81d-14cedc7de2b6" >
+		<http:listener doc:name="Listener" doc:id="1d020a00-c481-4b38-b98a-f778164b422a" config-ref="http-listener-config" path="/*"/>
+		<http:load-static-resource doc:name="Load static resource" doc:id="4cb776cf-92e2-4776-95bd-525b4539ea6f" resourceBasePath="${app.home}/web/" />
+	</flow>
+</mule>
